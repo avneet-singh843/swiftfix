@@ -1,0 +1,9 @@
+.carousel {
+    width: 100vw;
+    height: 28rem;
+    background-color: white;
+}
+
+.carousel .label {
+    color: white;
+}

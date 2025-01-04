@@ -1,0 +1,9 @@
+.addReview{
+    height:25rem;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+.addReview h1{
+    text-align: center;
+    justify-content: center;
+}

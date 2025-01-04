@@ -1,0 +1,51 @@
+.intro {
+  background-image: url(../assets/image.png);
+  height: 100vh;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro2 {
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.introHeading {
+  font-size: clamp(3rem, 6vw, 6rem); /* Minimum: 3rem, Maximum: 6rem */
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 80%;
+}
+
+.typewriter {
+  font-size: clamp(2rem, 5vw, 5rem); /* Minimum: 2rem, Maximum: 5rem */
+  color: #00afaf;
+  text-align: center;
+  z-index: 20;
+  padding-top: 2rem;
+}
+.typewriter-container {
+  font-size: clamp(2rem, 5vw, 5rem); /* Responsive font size */
+  color: #00afaf;
+  text-align: center;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .introHeading {
+    font-size: clamp(2.5rem, 5vw, 5rem); /* Slightly larger for mobile */
+  }
+
+  .typewriter {
+    font-size: clamp(2rem, 4vw, 4.5rem);
+  }
+}
