@@ -4,24 +4,18 @@ import { useState } from "react";
 function ReviewComponent() {
   const [email, setEmail] = useState("");
   const [review, setReview] = useState("");
+  const [submittedReviews, setSubmittedReviews] = useState([]); // Dummy data state
 
-  async function addReview(event) {
+  function addReview(event) {
     event.preventDefault();
-    const response = await fetch(
-      "https://swiftfix-backend.onrender.com/api/review",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          review,
-        }),
-      }
-    );
-    const data = await response.json();
-    console.log(data);
+
+    // Adding new review to dummy data
+    const newReview = { email, review };
+    setSubmittedReviews([...submittedReviews, newReview]);
+
+    // Clearing input fields
+    setEmail("");
+    setReview("");
   }
 
   return (
