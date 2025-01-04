@@ -71,16 +71,20 @@ function LoginPage() {
               placeholder="Enter your password"
             />
           </div>
-          <button
-            className={`bg-${
-              buttonState === 0 ? "blue-500" : "[#00afaf]"
-            } hover:bg-${
-              buttonState === 0 ? "blue-700" : "[#008080]"
-            } text-white font-bold py-2 px-4 rounded ease-in-out duration-300 hover:shadow-lg mt-4`}
-            type="submit"
-          >
-            Log In as {buttonState === 0 ? "User" : "Worker"}
-          </button>
+          {buttonState == 0 && (
+            <Link to={"/Avneet"}>
+              <button className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded ease-in-out duration-300 hover:shadow-lg py-2">
+                LogIn
+              </button>
+            </Link>
+          )}
+          {buttonState == 1 && (
+            <Link to={"/Raj"}>
+              <button className=" bg-[#00afaf] hover:bg-[#00afaf] text-white font-bold py-1 px-4 rounded ease-in-out duration-300 hover:shadow-lg py-2">
+                LogIn
+              </button>
+            </Link>
+          )}
         </form>
       </div>
       <label className="newAccount">
